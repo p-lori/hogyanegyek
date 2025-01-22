@@ -6,6 +6,5 @@ fileList = []
 for i in file:
     fileList.append(classes.Kerdesek(i))
 file.close()
-print(fileList[0].question)
-
+print(fileList[3].question)
 
