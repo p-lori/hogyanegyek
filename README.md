@@ -1,4 +1,4 @@
-# Hogyan egyel?
+# Hogyan egyél?
 
 
 Ez a program egy egyszerű, interaktív kvízt valósít meg, amely segít felmérni, hogy mennyire egészségesen táplálkozol és élsz. A kvíz során különböző életmóddal és táplálkozással kapcsolatos kérdésekre válaszolva pontokat gyűjtesz, amelyek alapján a program kategóriába sorolja az eredményeidet.
