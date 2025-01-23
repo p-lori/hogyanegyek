@@ -10,19 +10,18 @@ file.close()
 
 numquestion = 0
 point = 0
-ans = ["a", "b", "c"]
 
 for i in range(len(fileList)):
     numquestion += 1
     num = random.randint(0, len(fileList) - 1)
     print(f"{numquestion}. kérdés: {fileList[num].question}\nVálaszok:\n\ta, {fileList[num].answer1}\n\tb, "
           f"{fileList[num].answer2}\n\tc, {fileList[num].answer3}")
-    answer = input("a / b / c: ")
-    while answer not in ans:
+    answer = input("a / b / c: ").lower()
+    while answer not in ("a", "b", "c"):
         print("Helyes adatot adjon meg!")
         print(f"{numquestion}. kérdés: {fileList[num].question}\nVálaszok:\n\ta, {fileList[num].answer1}\n\tb, "
               f"{fileList[num].answer2}\n\tc, {fileList[num].answer3}")
-        answer = input("a / b / c: ")
+        answer = input("a / b / c: ").lower()
 
     if answer == "a":
         point += fileList[num].point1
