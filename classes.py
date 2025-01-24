@@ -8,6 +8,3 @@ class Kerdesek:
         self.point1 = int(data[4])
         self.point2 = int(data[5])
         self.point3 = int(data[6])
-
-
-
