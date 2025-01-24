@@ -33,6 +33,7 @@ for i in range(len(fileList)):
     fileList.remove(fileList[num])
 
 print(f"A pontszámod: {point}")
+
 if point >= 13 and point <= 21:
     print("Gratulálunk, te tudod, hogy kell igazán egészségesen élni. Ami nagyon fontos, hogy továbbra is figyelj oda a\n"
           " megfelelő hidratálásra és a rostbevitelre. Ha még nem próbáltad, akkor itt az ideje kipróbálni az alternatív\n"
