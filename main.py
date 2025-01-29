@@ -15,7 +15,7 @@ for i in range(len(fileList)):
           f"{num.answer2}\n\tc, {num.answer3}")
     answer = input("a / b / c: ").lower()
     while answer not in ("a", "b", "c"):
-        print("Helyes adatot adjon meg!")
+        print("\n---- Helyes választ adjon meg! ----\n")
         print(f"{numquestion}. kérdés: {num.question}\nVálaszok:\n\ta, {num.answer1}\n\tb, "
               f"{num.answer2}\n\tc, {num.answer3}")
         answer = input("a / b / c: ").lower()
