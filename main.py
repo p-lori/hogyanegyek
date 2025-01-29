@@ -1,7 +1,5 @@
-import classes
 import random
 import moduls
-
 
 fileList = moduls.ReadFile("adatok.txt")
 
