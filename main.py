@@ -1,36 +1,33 @@
 import classes
 import random
+import moduls
 
-file = open("adatok.txt", "r", encoding="utf8")
-fileList = []
 
-for i in file:
-    fileList.append(classes.Kerdesek(i))
-file.close()
+fileList = moduls.ReadFile("adatok.txt")
 
 numquestion = 0
 point = 0
 
 for i in range(len(fileList)):
     numquestion += 1
-    num = random.randint(0, len(fileList) - 1)
-    print(f"{numquestion}. kérdés: {fileList[num].question}\nVálaszok:\n\ta, {fileList[num].answer1}\n\tb, "
-          f"{fileList[num].answer2}\n\tc, {fileList[num].answer3}")
+    num = random.choice(fileList)
+    print(f"{numquestion}. kérdés: {num.question}\nVálaszok:\n\ta, {num.answer1}\n\tb, "
+          f"{num.answer2}\n\tc, {num.answer3}")
     answer = input("a / b / c: ").lower()
     while answer not in ("a", "b", "c"):
         print("Helyes adatot adjon meg!")
-        print(f"{numquestion}. kérdés: {fileList[num].question}\nVálaszok:\n\ta, {fileList[num].answer1}\n\tb, "
-              f"{fileList[num].answer2}\n\tc, {fileList[num].answer3}")
+        print(f"{numquestion}. kérdés: {num.question}\nVálaszok:\n\ta, {num.answer1}\n\tb, "
+              f"{num.answer2}\n\tc, {num.answer3}")
         answer = input("a / b / c: ").lower()
 
     if answer == "a":
-        point += fileList[num].point1
+        point += num.point1
     elif answer == "b":
-        point += fileList[num].point2
+        point += num.point2
     elif answer == "c":
-        point += fileList[num].point3
+        point += num.point3
 
-    fileList.remove(fileList[num])
+    fileList.remove(num)
 
 print(f"A pontszámod: {point}")
 
