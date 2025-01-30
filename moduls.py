@@ -5,4 +5,5 @@ def ReadFile(path):
     fileList = []
     for i in file:
         fileList.append(classes.Kerdesek(i))
+    file.close()
     return fileList
